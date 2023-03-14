@@ -1,0 +1,110 @@
+@use '../../scss/' as *;
+/* Header */
+
+.header {
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;
+    padding: 0 25px;
+    background-color: #fff;
+    padding: 25px;
+    box-shadow: 1px 1px 7px 1px #d5d5d5;
+    z-index: 999;
+}
+.header-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #544866;
+    max-width: 250px;
+    cursor: pointer;
+
+}
+.search-mb,
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F8F8F8;
+    width: 500px;
+    height: 50px;
+    border-radius: 999px;
+    @include mobile {
+        display: none;
+        width: 100%;
+    }
+}
+.search-mb {
+    display: none;
+    &.active {
+        @include mobile {
+            display: flex;
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+}
+
+.search-input {
+    padding-left: 30px;
+    border: none;
+    outline: none;
+    background: transparent;
+    height: 100%;
+    flex:1;
+    font-weight: 600;
+    color: #5C6A8C;
+}
+.search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 28px;
+    color: #5C6A8C;
+    cursor: pointer;
+    width: 50px;
+    border-radius: 999px;
+    border: none;
+    background-color: transparent;
+}
+.flex-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.cart {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #544866;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.cart-icon {
+    color: #fff;
+    font-size: 22px;
+    
+}
+.cart-quantity {
+    position: absolute;
+    right: -5px;
+    top: 5px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    background-color: #E56B6B;
+    border-radius: 999px;
+    color: #fff;
+}
+.search-cart {
+    display: none;
+}

@@ -1,0 +1,37 @@
+@use '../../scss/' as *;
+/* Fluit */
+
+.category {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    padding: 30px;
+    flex-wrap: wrap;
+
+    @include tablet {
+        justify-content: center;
+    }
+}
+.fluit {
+
+}
+.fluit-img {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 4px 6px 5px 0 #e8e8e8;
+    cursor: pointer;
+
+}
+.fluit-name {
+    margin-top: 5px;
+    color: #8B8B8B;
+    text-align: center;
+    font-weight: 500;
+    font-size: 17px;
+}

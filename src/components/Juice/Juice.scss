@@ -1,0 +1,166 @@
+@use '../../scss/' as *;
+/* Juice */
+
+.juice {
+    
+    padding: 0 30px;
+}
+.juice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.juice-header-title {
+    font-size: 25px;
+    font-weight: 700;
+    color: #544866;
+}
+.juice-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: #E6E6E6;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.juice-filter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 35px;
+}
+.juice-filter h4 {
+    cursor: pointer;
+    padding: 0 10px;
+    position: relative;
+    font-weight: 600;
+    color: #544866;
+}
+.juice-filter h4.active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #AB97F3;
+
+}
+
+.juice-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 130px 0;
+    margin-top: 100px;
+    margin-bottom: 50px;
+
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+.juice-search {
+    margin-top: 270px;
+}
+.box-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: 4px 4px 6px 2px #d8d8d8;
+    cursor: pointer;
+    transition: all 0.1s linear;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+    &:hover::after {
+        content: '';
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 20px;
+        background-color: #11111185;
+    }
+    &:hover::before {
+        content: 'Xem sản phảm';
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #544866;
+        padding: 10px 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 20px;
+        background-color: #fff;
+        border: 2px solid #544866;
+        font-size: 16px;
+        font-weight: 600;
+        z-index: 1000;
+    }
+
+    @include mobile {
+        transform: translateY(-10px);
+        margin: 0 auto;
+    }
+
+}
+.juice-img {
+    position: absolute;
+    left: 50%;
+    top: 28%;
+    width: 200px;
+    transform: translate(-50%,-50%);
+}
+.juice-title {
+    font-weight: 700;
+    color: #544866;
+    font-size: 20px;
+}
+.juice-des {
+    font-size: 15px;
+    color: #CCCCCC;
+    padding-top: 10px;
+
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+
+    flex: 1;
+}
+.juice-sell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+.juice-price {
+    font-weight: 600;
+    color: #544866;
+}
+.juice-add {
+    font-size: 40px;
+    color: #111;
+}
